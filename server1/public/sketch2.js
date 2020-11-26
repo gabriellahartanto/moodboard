@@ -68,15 +68,15 @@ function draw() {
   if (showNote) {
     noStroke();
     if (color === 'orange') {
-      fill('orange');
+      fill('#FF931E');
     } else if (color === 'green') {
-      fill('green');
+      fill('#7AC943');
     } else if (color === 'blue') {
-      fill('blue');
+      fill('#3FA9F5');
     } else if (color === 'red') {
-      fill('red');
+      fill('#FF1D25');
     } else if (color === 'pink') {
-      fill('pink');
+      fill('#FF7BAC');
     }
     square(0, 0, 450);
   }

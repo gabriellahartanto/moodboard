@@ -1,27 +1,5 @@
 var big = [];
-// var drawing = [];
 var note = '';
-
-// function setup() {
-//   let canvas = createCanvas(1000, 1000);
-
-//   canvas.parent('canvas');
-
-//   var ref = database.ref('drawings');
-//   ref.on('value', (data) => {
-//     const drawings = data.val();
-//     const keys = Object.keys(drawings);
-//     for (let i = 0; i < keys.length; i++) {
-//       var li = createElement('li', '');
-//       var ahref = createA('#', keys[i]);
-//       ahref.mousePressed(showDrawing);
-//       ahref.parent(li);
-//       li.parent('list');
-//     }
-//   }, (err) => {
-//     console.log(err);
-//   });
-// }
 
 function setup() {
   let canvas = createCanvas(2000, 800);
@@ -47,24 +25,21 @@ function draw() {
   
   for (let k = 0; k < big.length; k++) {
     if (k === big.length - 1) {
-      setInterval(() => {
-        scale(0.5 - 0.01);
-      }, 5000);
+      // DO SMTHG
     }
     noStroke();
     if (big[k].color === 'orange') {
-      fill('orange');
+      fill('#FF931E');
     } else if (big[k].color === 'green') {
-      fill('green');
+      fill('#7AC943');
     } else if (big[k].color === 'blue') {
-      fill('blue');
+      fill('#3FA9F5');
     } else if (big[k].color === 'red') {
-      fill('red');
+      fill('#FF1D25');
     } else if (big[k].color === 'pink') {
-      fill('pink');
+      fill('#FF7BAC');
     }
     square(big[k].location.x, big[k].location.y, 450);
-    // console.log("THIS DRAWING", big[k].drawing)
     for (let i = 0; i < big[k].drawing.length; i++) {
       beginShape();
       stroke(0);
@@ -87,37 +62,3 @@ function showDrawing(key) {
     console.log(err);
   });
 }
-
-// function showDrawing(key) {
-//   let ref = database.ref(`drawings/${key}`);
-//   ref.on('value', (data) => {
-//     let image = data.val();
-//     var drawing = [];
-//     drawing = image.drawing;
-//     big.push(drawing);
-//     note = image.color;
-//     console.log(drawing, note);
-//   }, (err) => {
-//     console.log(err);
-//   });
-// }
-
-// function showDrawing() {
-//   let key = this.html();
-//   let ref = database.ref(`drawings/${key}`);
-//   ref.on('value', (data) => {
-//     let image = data.val();
-//     drawing = image.drawing;
-//     note = image.color;
-//     console.log(drawing, note);
-//   }, (err) => {
-//     console.log(err);
-//   });
-// }
-
-// drawing = {
-//   location: image.rand,
-//   sketch: []
-// }
-
-// big [ drawing []]
