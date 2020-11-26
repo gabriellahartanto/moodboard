@@ -9,6 +9,9 @@ app.use(express.static('public'));
 
 io.on('connection', (socket) => {
   console.log(`${socket.id} user connected`);
+  socket.on('mouse', (data) => {
+    socket.broadcast.emit('mouse', data);
+  });
 });
 
 server.listen(port, () => {
