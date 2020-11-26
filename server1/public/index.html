@@ -37,9 +37,6 @@
     </div>
     <div id="question" style="background-color: white; padding-right: 0.5rem; padding-bottom: 0.3rem; padding-left: 0.5rem; padding-top: 0.1rem;text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: 300; margin-bottom: 1rem;">
     </div>
-    <!-- <div style="height: 30px; background-color: white; padding-bottom: 0.5rem; text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: 300; margin-bottom: 1rem;">
-      <p style="margin: 0; padding: 0">OR YOU CAN ALSO WRITE WHATEVER YOU LIKE!</p>
-    </div> -->
     <script>
       let questions = ['How do you feel about the weather?', 'How was work/school today?', 'What/Who made you smile today?', 'What did you find beautiful today?',
       'What did you do today?', 'What was one small victory you had today?', 'Are you happy with what you have right now?', "What's your motivation for today?",
@@ -53,12 +50,14 @@
     <div style="display: flex; flex-direction: column; align-items: center;">
       <div id="canvas" style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 1.2rem;"></div>
       <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 1.3rem; align-items: center;">
+        <img src="noun_Undo_3401840.png" style="width: 50px; height: 50px; margin-right: 1rem;" id="btn-undo" alt="undo">
         <button type="button" id="btn-orange" class="btn" style="background-color: #FF931E;">HAPPY</button>
         <button type="button" id="btn-green" class="btn" style="background-color: #7AC943; font-size: 0.7rem;">SURPRISED</button>
         <button type="button" id="btn-blue" class="btn" style="background-color: #3FA9F5;">SAD</button>
         <button type="button" id="btn-red" class="btn" style="background-color: #FF1D25;">ANGRY</button>
         <button type="button" id="btn-pink" class="btn" style="background-color: #FF7BAC;">LOVE</button>
-        <button type="button" id="btn-done" class="btn-min" onclick="location.href='thanks.html'">DONE</button>
+        <button type="button" id="btn-done" class="btn-min">DONE</button>
+        <!-- onclick="location.href='thanks.html' -->
       </div>
     </div>
 
